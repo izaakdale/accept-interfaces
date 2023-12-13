@@ -28,5 +28,6 @@ func main() {
 		Addr:    fmt.Sprintf("%s:%s", os.Getenv("HOST"), os.Getenv("PORT")),
 		Handler: mux,
 	}
+	log.Printf("listening on %s...\n", srv.Addr)
 	srv.ListenAndServe()
 }
